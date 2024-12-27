@@ -1,0 +1,16 @@
+<bookstore>
+<book category="Prog">
+    <title> java programming</title>
+    <author> James Gosling</author>
+    <year>2001</year>
+    <price>$2.2</price>
+</book>
+<book category="DataBase">
+    <title>Data Base management System</title>
+    <author> Raghu RamaKrishna
+        
+    </author>
+    <year>2004</year>
+    <price>$5.2</price>
+</book>
+</bookstore>

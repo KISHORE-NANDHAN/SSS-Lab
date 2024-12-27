@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Show(){
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET',"data.txt");
+            xhr.onreadystatechange = function(){
+                if(this.readyState===4 && this.status===200)
+                    document.getElementById("show").innerHTML = this.responseText;
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>The XmlHttpRequest Object</h1>
+    	<button onclick="Show()">Click here to get the text</button>
+        <p id="show"></p>
+    </center>
+</body>
+</html>

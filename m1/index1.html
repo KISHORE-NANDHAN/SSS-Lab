@@ -1,0 +1,73 @@
+<html>
+   <head>
+      <title>Registration form</title>
+   </head>
+   <body>
+      <form>
+         <center>
+            <h1>Registration Form</h1>
+            <table border="5">
+               <tr>
+                  <th>Username: </th>
+                  <th><input id="Username" type="text" required/></th>
+               </tr>
+               <tr>
+                  <th>Password: </th>
+                  <th><input id="Password" type="text"/></th>
+               </tr>
+               <tr>
+                  <th>Email: </th>
+                  <th><input id="Email" type="text"/></th>
+               </tr>
+               <tr>
+                  <th>Mobile: </th>
+                  <th><input id="mobile" type="number"/></th>
+               </tr>
+               <tr>
+                  <td colspan="2">
+                     <center>
+                        <input type="button" onclick="Validate()" value="Submit" />
+                        <input type="reset" />
+                     </center>
+                  </td>
+               </tr>
+            </table>
+         </center>
+      </form>
+   </body>
+   <script>
+      function Validate()
+      {
+          var name = document.getElementById("Username").value;
+          var pwd = document.getElementById("Password").value;
+          var mail = document.getElementById("Email").value;
+          var phno = document.getElementById("mobile").value;
+          
+          const pwdValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+          const emailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          const nameValid = /^[a-zA-Z]$/;
+      
+          var atposition=mail.indexOf("@");  
+          var dotposition=mail.lastIndexOf(".");  
+           
+      
+          if(name==="" || name.length<3)
+              alert("max characters should be 3-25");
+          else if(!nameValid.test(name))
+              alert("name should contain only alphabets");
+          if(pwd.length<8){
+              alert("password should be atleast 8 characters");
+          }
+          else if(!pwdValid.test(pwd)){
+              alert("password should contain atleast 1 Capital,1 special character and numerical value");
+          }
+          if(mail.length===""||mail.length<4)
+              alert("email should be atleast 4 characters")
+          else if(atposition<1 || dotposition<atposition+2 || dotposition+2>=mail.length){  
+              alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+          } 
+          if(phno.length<10 || phno.length>10)
+              alert("length of mobile no should be 10 digits");
+      }
+   </script>
+</html>
