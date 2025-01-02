@@ -1,38 +1,41 @@
-<html>
-   <head>
-      <title>Registration form</title>
-   </head>
-   <body>
-      <form>
-         <center>
-            <h1>Registration Form</h1>
-            <table border="5">
-               <tr>
-                  <th>Username: </th>
-                  <th><input id="Username" type="text"/></th>
-               </tr>
-               <tr>
-                  <th>Password: </th>
-                  <th><input id="Password" type="text"/></th>
-               </tr>
-               <tr>
-                  <th>Email: </th>
-                  <th><input id="Email" type="email"/></th>
-               </tr>
-               <tr>
-                  <th>Mobile: </th>
-                  <th><input id="mobile" type="number"/></th>
-               </tr>
-               <tr>
-                  <td colspan="2">
-                     <center>
-                        <input type="submit" onsubmit="" />
-                        <input type="reset" onsubmit="" />
-                     </center>
-                  </td>
-               </tr>
-            </table>
-         </center>
-      </form>
-   </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+</head>
+<body>
+   <form>
+      <center>
+         <h1>Registration Form</h1>
+         <table border="5">
+            <tr>
+               <th>Username: </th>
+               <th><input id="Username" type="text" required/></th>
+            </tr>
+            <tr>
+               <th>Password: </th>
+               <th><input id="Password" type="password" required/></th>
+            </tr>
+            <tr>
+               <th>Email: </th>
+               <th><input id="Email" type="email" required/></th>
+            </tr>
+            <tr>
+               <th>Mobile: </th>
+               <th><input id="mobile" type="number" required/></th>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <center>
+                     <input type="submit" value="Submit" />
+                     <input type="reset" value="Reset" />
+                  </center>
+               </td>
+            </tr>
+         </table>
+      </center>
+   </form>
+</body>
 </html>
