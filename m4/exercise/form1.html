@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <style>
+        table{
+            border: none;
+            align-content: center;
+            padding: 4px;
+        }
+   </style>
+</head>
+<body>
+    <div>
+        |<a href="Registration.html">Registration</a> |<a href="Login.html">Login</a> |<a href="View.html">View</a>|
+        <a href="viewall.html">ViewAll</a>| <a href="update.html">update</a> | <a href="delete">Delete</a>| <a href="profileupdation.html">Profile Updation</a>
+        |<a href="logout.html">Logout</a>
+
+        <h1>Student Registration form</h1>
+    </div>
+    <hr/>
+   <form name="form1" method="POST" action="form.php">
+      <center>
+         <h1>Registration Form</h1>
+         <table>
+            <tr>
+               <th>Enter Reg.No: </th>
+               <th><input name="regno" placeholder="Enter Reg.No" type="text" id="regno" required /></th>
+            </tr>
+            <tr>
+               <th>Enter Name: </th>
+               <th><input name="username" placeholder="Enter Name" type="text" id="name" required /></th>
+            </tr>
+            <tr>
+               <th>Gender: </th>
+               <th>
+                  <input name="gender" type="radio" id="gender" value="Male" required />Male
+                  <input name="gender" type="radio" id="gender" value="Female" required />Female
+               </th>
+            </tr>
+            <tr>
+               <th>Enter DOB: </th>
+               <th><input name="dob" type="date" id="dob" required /></th>
+            </tr>
+            <tr>
+               <th>Select Course: </th>
+               <th>
+                  <select name="course" required>
+                     <option value="select course">Course</option>
+                     <option value="C">C</option>
+                     <option value="python">Python</option>
+                     <option value="java">Java</option>
+                  </select>
+               </th>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <center>
+                     <input type="submit" value="Submit" />
+                     <input type="reset" value="Reset" />
+                  </center>
+               </td>
+            </tr>
+         </table>
+      </center>
+   </form>
+</body>
+</html>
