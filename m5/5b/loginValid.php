@@ -11,17 +11,23 @@
         if ($username == "lbrce" && $password == "lbrce123") {
             setcookie("user", "lbrce", time() + 3600, "/", "", 0);
             setcookie("pwd", "lbrce123", time() + 3600, "/", "", 0);
-            echo "<script>alert('Account is verified');</script>";
-            header("Location:home.php");  // Correct syntax for header
+            echo "<script>
+                    alert('Account is verified');
+                    window.location.href = 'home.php'; // Redirect after the alert
+                  </script>";
             exit();
         } else {
-            echo '<script>alert("Invalid credentials");</script>';
-            header("Location:login.php");
+            echo "<script>
+                    alert('Invalid credentials');
+                    window.location.href = 'login.php'; // Redirect after the alert
+                  </script>";
             exit();
         }
     } else {
-        echo '<script>alert("Please fill in both fields.");</script>';
-        header("Location:login.php");
+        echo "<script>
+                alert('Please fill in both fields.');
+                window.location.href = 'login.php'; // Redirect after the alert
+              </script>";
         exit();
     }
 ?>

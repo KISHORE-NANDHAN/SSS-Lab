@@ -1,11 +1,10 @@
 <?php
     include "links.html";
-    setcookie("user","",time()-3600,"/","",0);
-    setcookie("pwd","",time()-3600,"/","",0);
-    header("Location:login.php");
-    ?>
-        <script> alert('redirecting to login');
-    <?php
+    setcookie("user", "", time() - 3600, "/", "", 0);
+    setcookie("pwd", "", time() - 3600, "/", "", 0);
+    echo "<script>
+            alert('Redirecting to login');
+            window.location.href = 'login.php'; // Redirect after the alert
+          </script>";
     exit();
 ?>
-
