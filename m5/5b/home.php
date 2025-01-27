@@ -7,7 +7,7 @@
     }
     else{
         echo '<script>alert("please login first"); </script>';
-        header("Location : login.php");
+        header("Location:login.php");
         exit();
     }
 ?>
