@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include 'links.html';
 
     if(isset($_SESSION["username"])&&isset($_SESSION["password"]))

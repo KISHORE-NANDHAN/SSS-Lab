@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    echo "the session id is : ".session_id(); //This function is used to get the id of the session
+    echo "the session id is : ".session_id();
 ?>
 <?php 
     include 'links.html';
