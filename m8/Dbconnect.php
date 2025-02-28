@@ -10,7 +10,7 @@
     if(!$conn){
         die("Connection failed : ".mysqli_connect_error());
     }else{
-        $sql = "DROP DATABASE LBRCE";
+        $sql = "CREATE DATABASE LBRCE"; //to drop a database use DROP DATABASE Database_name
         if(mysqli_query($conn,$sql)){
             echo "<h1><center>Database Created Successfully </center></h1>";
         }else{

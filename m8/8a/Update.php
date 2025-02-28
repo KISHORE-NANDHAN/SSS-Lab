@@ -2,7 +2,7 @@
     include 'links.html';
 ?>
 <body>
-    <center><h1>Student Registration Form</h1></center>
+    <center><h1>Update Form</h1></center>
     <hr/>
     <center>
     <h3>Registration Form</h3>
