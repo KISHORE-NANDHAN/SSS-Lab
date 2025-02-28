@@ -50,8 +50,8 @@
                 <form action="UpdateHandle.php" method="POST">
                 <table>
                     <tr>
-                        <th>Enter Reg.no</th>
-                        <td><input type="number" name="reg" placeholder="Registration number" value="<?php echo $rollno; ?>" disabled></td>
+                        <th>Enter Reg.no</th> 
+                        <td><?php echo $rollno; ?><input type="number" id="reg" name="reg" placeholder="Registration number" value="<?php echo $rollno; ?>" hidden></td>
                     </tr>
                     <tr>
                         <th>Enter Name</th>

@@ -14,11 +14,11 @@
     }
     var_dump($_POST);
 
-    $rollno = $_POST['reg'];
-    $name = $_POST['name'];
-    $gender = $_POST['gen'];
-    $dob = $_POST['dob'];
-    $course = $_POST['course'];
+    $rollno = mysqli_real_escape_string($conn, $_POST['reg']);
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $gender = mysqli_real_escape_string($conn, $_POST['gen']);
+        $dob = mysqli_real_escape_string($conn, $_POST['dob']);
+        $course = mysqli_real_escape_string($conn, $_POST['course']);
     
     $sql = "UPDATE registration SET Name=?, Gender=?, DOB=?, Course=? WHERE Rollno=?";
 
