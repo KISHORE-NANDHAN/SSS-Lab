@@ -3,7 +3,7 @@
 ?>
 <body>
     <center>
-        <form method="post" action="Update.php">
+        <form method="post" action="Delete.php">
             <input type='search' name='search' placeholder='Enter Rollno to fetch records' />
             <br><br>
             <input type='submit' value='Search'>
@@ -47,41 +47,36 @@
                 $course = $row['Course'];
                 ?>
                 <center>
-                <form action="UpdateHandle.php" method="POST">
+                <form action="DeleteHandle.php" method="POST">
                 <table>
                     <tr>
                         <th>Enter Reg.no</th> 
-                        <td><?php echo $rollno; ?><input type="number" id="reg" name="reg" placeholder="Registration number" value="<?php echo $rollno; ?>" hidden></td>
+                        <td><?php echo $rollno; ?><input type="number" name="reg" value="<?php echo $rollno; ?>" hidden></td>
                     </tr>
                     <tr>
                         <th>Enter Name</th>
-                        <td><input type="text" name="name" placeholder="Enter name" value="<?php echo $name; ?>" required></td>
+                        <td><?php echo $name; ?></td>
                     </tr>
                     <tr>
                         <th>Gender</th>
                         <td>
-                            <input type="radio" name="gen" value="male" <?php if($gender == "male") echo "checked"; ?> required> Male
-                            <input type="radio" name="gen" value="female" <?php if($gender == "female") echo "checked"; ?> required> Female
+                            <?php echo $gender; ?>
                         </td>
                     </tr>
                     <tr>
                         <th>Date of Birth</th>
-                        <td><input type="date" name="dob" value="<?php echo $dob; ?>" required></td>
+                        <td><?php echo $dob; ?></td>
                     </tr>
                     <tr>
                         <th>Select a Course</th>
                         <td>
-                            <select name="course" required>
-                                <option value="" disabled>Select Course</option>
-                                <option value="python" <?php if($course == "python") echo "selected"; ?>>Python</option>
-                                <option value="java" <?php if($course == "java") echo "selected"; ?>>Java</option>
-                            </select>
+                            <?php echo $course; ?>
                         </td>
                     </tr>
                     <tr>
                         <td colspan='2'>
                             <center>
-                            <input type="submit" value="Update Record">
+                            <input type="submit" value="Delete Record">
                             </center>
                         </td>
                     </tr>
