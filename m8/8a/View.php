@@ -49,23 +49,23 @@
                 <th>DOB</th>
                 <th>Course</th>
             </tr>";
-            while($row = mysqli_fetch_assoc($result)) {
-                $rollno = $row['Rollno'];
-                $name = $row['Name'];
-                $gender = $row['Gender'];
-                $dob = $row['DOB'];
-                $course = $row['Course'];
+            
+            $row = mysqli_fetch_assoc($result);
+            $rollno = $row['Rollno'];
+            $name = $row['Name'];
+            $gender = $row['Gender'];
+            $dob = $row['DOB'];
+            $course = $row['Course'];
 
-                echo "
-                    <tr>
-                        <td>".$rollno."</td>
-                        <td>".$name."</td>
-                        <td>".$gender."</td>
-                        <td>".$dob."</td>
-                        <td>".$course."</td>
-                    </tr>
-                ";
-            }
+            echo "
+                <tr>
+                    <td>".$rollno."</td>
+                    <td>".$name."</td>
+                    <td>".$gender."</td>
+                    <td>".$dob."</td>
+                    <td>".$course."</td>
+                </tr>
+            ";
             echo "</table></center>";
         } else {
             // If no rows found
