@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="register.html">Register</a>|
+    <a href="ViewAll.php">ViewAll</a>|
+    <a href="Update.php">Update</a>|
+    <a href="Delete.php">Delete</a>| <br/><br/>
+    <form name="register" method="POST" action="register_insert.php">
+        <label for="name">Name</label>
+        <input type="text" name="uname" id="name" required/><br/>
+
+        <label for="Department">Department</label>
+        <input type="text" name="dept" id="Department" required/><br/>
+
+        <label for="salary">Salary</label>
+        <input type="number" name="salary" id="salary" required/><br/>
+
+        <label for="phone">Contact</label>
+        <input type="number" name="phone" id="phone" required/><br/>
+
+        <input type="submit" name="submit"/>
+    </form>
+</body>
+</html>
